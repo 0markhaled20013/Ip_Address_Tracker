@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="main.CSS" />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <header class="relative">
+      <img
+        src="./images/pattern-bg-mobile.png"
+        alt=""
+        class="absolute left-0 top-0 -z-10 w-full lg:hidden"
+        style="height: 30vh"
+      />
+      <img
+        src="./images/pattern-bg-desktop.png"
+        alt=""
+        class="hidden lg:block absolute left-0 top-0 -z-10 w-full"
+        style="height: 30vh"
+      />
+      <h1
+        class="text-center text-white w-fit m-auto pt-7 mb-7 text-lg font-bold"
+      >
+        IP Address Tracker
+      </h1>
+      <form id="search_bar" class="search-bar m-auto flex mt-4 mb-4 w-3/4">
+        <input
+          type="text"
+          placeholder="Search for any IP address or domain"
+          class="bg-white pl-4 rounded-l flex-grow pt-2 pb-2"
+          id="ip_Address"
+        />
+        <button
+          class="bg-black rounded-r w-8 flex justify-center items-center"
+          id="btn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
+      <div
+        class="result bg-white rounded text-center w-9/12 absolute top-1/2 lg:flex lg:items-center lg:justify-around lg:h-40 lg:mt-10"
+      >
+        <div>
+          <p id="title" class="text-gray-500">IP Address</p>
+          <p id="IP_Address">Address</p>
+        </div>
+        <div>
+          <p id="title" class="text-gray-500">Location</p>
+          <p id="Location">Location</p>
+        </div>
+        <div>
+          <p id="title" class="text-gray-500">Timezone</p>
+          <p id="Timezone">Timezone</p>
+        </div>
+        <div>
+          <p id="title" class="text-gray-500">ISP</p>
+          <p id="ISP">ISP</p>
+        </div>
+      </div>
+    </header>
+    <hr />
+    <div id="map" class=""></div>
+  </body>
+  <script src="main.js"></script>
+</html>
